@@ -50,6 +50,16 @@ return {
       lexical = {
         cmd = { "/Users/zimakki/code/lexical-lsp/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
         filetypes = { "elixir", "eelixir", "heex", "surface" },
+        root_dir = function(fname)
+          local lspconfig = require "lspconfig"
+          -- Set `~/Code/lexical` as root_dir for lexical project
+          local project = lspconfig.util.root_pattern ".git"(fname)
+          if project and string.sub(project, -12) == "code/lexical" then
+            return project
+          else
+            return lspconfig.util.root_pattern("mix.exs", ".git")(fname) or vim.loop.os_homedir()
+          end
+        end,
       },
     },
     -- customize how language servers are attached

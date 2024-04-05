@@ -13,6 +13,7 @@ return {
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.editing-support.nvim-treesitter-endwise" },
   { import = "astrocommunity.git.diffview-nvim" },
+  { import = "astrocommunity.git.neogit" },
   { import = "astrocommunity.lsp.lsplinks-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
   {

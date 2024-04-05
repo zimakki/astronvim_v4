@@ -47,6 +47,24 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      -- configure the tailwindcss lsp to work with heex and ex files too
+      tailwindcss = {
+        init_options = {
+          userLanguages = {
+            elixir = "phoenix-heex",
+            heex = "phoenix-heex",
+          },
+        },
+        settings = {
+          includeLanguages = {
+            ["html-eex"] = "html",
+            ["phoenix-heex"] = "html",
+            heex = "html",
+            eelixir = "html",
+            elixir = "html",
+          },
+        },
+      },
       lexical = {
         cmd = { "/Users/zimakki/code/lexical-lsp/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
         filetypes = { "elixir", "eelixir", "heex", "surface" },

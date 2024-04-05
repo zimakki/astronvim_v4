@@ -42,35 +42,51 @@ return {
     -- Mappings can be configured through AstroCore as well.
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
     mappings = {
-      -- first key is the mode
       n = {
-        -- second key is the lefthand side of the map
-
-        -- navigate buffer tabs with `H` and `L`
-        -- L = {
-        --   function() require("astrocore.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
-        --   desc = "Next buffer",
-        -- },
-        -- H = {
-        --   function() require("astrocore.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
-        --   desc = "Previous buffer",
-        -- },
-
         -- mappings seen under group name "Buffer"
-        ["<Leader>bD"] = {
-          function()
-            require("astroui.status.heirline").buffer_picker(
-              function(bufnr) require("astrocore.buffer").close(bufnr) end
-            )
-          end,
-          desc = "Pick to close",
-        },
-        -- tables with just a `desc` key will be registered with which-key if it's installed
-        -- this is useful for naming menus
-        ["<Leader>b"] = { desc = "Buffers" },
-        -- quick save
-        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+        ["<leader>b"] = { name = "Buffers" },
+        ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "NNNNNew tab" },
+        -- 🔭 Telescope
+        ["<leader>bb"] = { ":Telescope buffers<cr>", desc = "🔭 Buffers" },
+        ["<leader>ss"] = { ":Telescope current_buffer_fuzzy_find<cr>", desc = "🔭 Search Buffer" },
+        ["<leader>sh"] = { ":Telescope resume<cr>", desc = "🔭 Telescope History" },
+        ["<leader>st"] = { ":TodoTelescope<cr>", desc = "🔭 Telescope todo's" },
+        ["<leader>sc"] = { ":Telescope command_history<CR>", desc = "🔭 Telescope command_history" },
+
+        ["H"] = { ":bp<cr>", desc = "<<< buffer" },
+        ["L"] = { ":bn<cr>", desc = ">>> buffer" },
+
+        -- 🧪 testing
+        ["<leader>tt"] = { ":wa<cr>:Neotest run<cr>", desc = "🧪 run tests" },
+        ["<leader>tT"] = { ":Neotest summary<cr>", desc = "🧪 open tests summary" },
+        ["<leader>tr"] = { ":wa<cr>:Neotest run last<cr>", desc = "🧪 rerun last test" },
+        ["<leader>to"] = { ":Neotest output<cr>", desc = "🧪 open test output" },
+        ["<leader>tp"] = { ":Neotest output-panel<cr>", desc = "🧪 open test panel" },
+        ["<leader>td"] = { ":wa<cr>:TestNearest<cr>", desc = "🧪 🐞 debug nearest test" },
+
+        ["<C-e>"] = { "$", desc = "got the end of the line" },
+        ["<C-a>"] = { "0", desc = "got the start of the line" },
+        ["yY"] = { "ggVG", desc = "select AAAALLLLLLLLLL" },
+        ["<C-p>"] = { "@qn", desc = "🏃💨 rrruuuunnnn the macro and go to the next search term!!" },
+
+        ["<leader>aa"] = { ":ChatGPT<cr>", desc = "🧠 💬 ChatGPT" },
+        ["gj"] = { ":lua require('illuminate').goto_next_reference(wrap)<CR>", desc = "🏃💡 Illuminate Next" },
+        ["gk"] = { ":lua require('illuminate').goto_prev_reference(wrap)<CR>", desc = "🏃💡 Illuminate Prev" },
+        ["gf"] = { "gF", desc = "📁 Better gf! you want to go to the line number if it can find it" },
       },
+      i = {
+        ["<C-e>"] = { "<esc>A", desc = "▶ got the end of the line" },
+        ["<C-a>"] = { "<esc>I", desc = "◀ got the start of the line" },
+        ["<C-p>"] = { "|>", desc = "insert a |>" },
+        ["<C-j>"] = { "<%=", desc = "insert a <%=" },
+        ["<C-k>"] = { "%>", desc = "insert a %>" },
+      },
+      v = {
+        ["<C-e>"] = { "$", desc = "▶ got the end of the line" },
+        ["<C-a>"] = { "0", desc = "◀ got the start of the line" },
+        ["<leader>ai"] = { ":ChatGPTEditWithInstructions<cr>", desc = "🧠 💬 ChatGPTEditWithInstructions" },
+      },
+
       t = {
         -- setting a mapping to false will disable it
         -- ["<esc>"] = false,

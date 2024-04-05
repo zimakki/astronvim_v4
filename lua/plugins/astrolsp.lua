@@ -41,11 +41,16 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
+      "lexical",
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      lexical = {
+        cmd = { "/Users/zimakki/code/lexical-lsp/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
+        filetypes = { "elixir", "eelixir", "heex", "surface" },
+      },
     },
     -- customize how language servers are attached
     handlers = {

@@ -14,6 +14,7 @@ return {
   { import = "astrocommunity.editing-support.nvim-treesitter-endwise" },
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.git.neogit" },
+  { import = "astrocommunity.git.octo-nvim" },
   { import = "astrocommunity.lsp.lsplinks-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
   {

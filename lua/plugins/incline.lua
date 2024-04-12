@@ -36,11 +36,12 @@ return {
 
         local modified = vim.bo[props.buf].modified
         return {
+          { "┊  " .. vim.api.nvim_win_get_number(props.win), group = "DevIconWindows" },
+          { " ┊ " },
           { get_diagnostic_label() },
           { get_git_diff() },
           { (ft_icon or "") .. " ", guifg = ft_color, guibg = "none" },
           modified and { filename, " *", guifg = "white", gui = "bold" } or filename,
-          { props.focused and { "                     ", guibg = "red" } or "" },
         }
       end,
     }

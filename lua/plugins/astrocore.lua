@@ -57,12 +57,12 @@ return {
         ["L"] = { ":bn<cr>", desc = ">>> buffer" },
 
         -- 🧪 testing
-        ["<leader>tt"] = { ":wa<cr>:Neotest run<cr>", desc = "🧪 run tests" },
-        ["<leader>tT"] = { ":Neotest summary<cr>", desc = "🧪 open tests summary" },
-        ["<leader>tr"] = { ":wa<cr>:Neotest run last<cr>", desc = "🧪 rerun last test" },
-        ["<leader>to"] = { ":Neotest output<cr>", desc = "🧪 open test output" },
-        ["<leader>tp"] = { ":Neotest output-panel<cr>", desc = "🧪 open test panel" },
-        ["<leader>td"] = { ":wa<cr>:TestNearest<cr>", desc = "🧪 🐞 debug nearest test" },
+        [",tt"] = { ":wa<cr>:Neotest run<cr>", desc = "🧪 run tests" },
+        [",tT"] = { ":Neotest summary<cr>", desc = "🧪 open tests summary" },
+        [",tr"] = { ":wa<cr>:Neotest run last<cr>", desc = "🧪 rerun last test" },
+        [",to"] = { ":Neotest output<cr>", desc = "🧪 open test output" },
+        [",tp"] = { ":Neotest output-panel<cr>", desc = "🧪 open test panel" },
+        [",td"] = { ":wa<cr>:TestNearest<cr>", desc = "🧪 🐞 debug nearest test" },
 
         ["<C-e>"] = { "$", desc = "got the end of the line" },
         ["<C-a>"] = { "0", desc = "got the start of the line" },

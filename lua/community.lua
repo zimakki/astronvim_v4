@@ -9,6 +9,7 @@ return {
   { import = "astrocommunity.bars-and-lines.vim-illuminate" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
+  { import = "astrocommunity.diagnostics.error-lens-nvim" },
   { import = "astrocommunity.debugging.nvim-bqf" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.editing-support.nvim-treesitter-endwise" },

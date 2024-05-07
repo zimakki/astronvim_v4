@@ -36,8 +36,11 @@ return {
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.grapple-nvim" },
   { import = "astrocommunity.motion.vim-matchup" },
+  { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.full-dadbod" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.rainbow-delimiter-indent-blankline" },
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.utility.noice-nvim" },
 

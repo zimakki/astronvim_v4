@@ -13,6 +13,7 @@ return {
   { import = "astrocommunity.quickfix.nvim-bqf" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.editing-support.nvim-treesitter-endwise" },
+  { import = "astrocommunity.editing-support.multicursors-nvim" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.git.neogit" },

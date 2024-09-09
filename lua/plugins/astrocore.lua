@@ -47,11 +47,15 @@ return {
         ["<leader>b"] = { name = "Buffers" },
         ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "NNNNNew tab" },
         -- 🔭 Telescope
-        ["<leader>bh"] = { ":Telescope buffers<cr>", desc = "🔭 Buffers" },
+        ["<leader>sb"] = { ":Telescope buffers<cr>", desc = "🔭 Buffers" },
         ["<leader>ss"] = { ":Telescope current_buffer_fuzzy_find<cr>", desc = "🔭 Search Buffer" },
         ["<leader>sh"] = { ":Telescope resume<cr>", desc = "🔭 Telescope History" },
         ["<leader>st"] = { ":TodoTelescope<cr>", desc = "🔭 Telescope todo's" },
         ["<leader>sc"] = { ":Telescope command_history<CR>", desc = "🔭 Telescope command_history" },
+        ["<leader>sp"] = {
+          ":Telescope mona elixir_application_modules<cr>",
+          desc = "🔭 Telescope mona application modules",
+        },
 
         ["H"] = { ":bp<cr>", desc = "<<< buffer" },
         ["L"] = { ":bn<cr>", desc = ">>> buffer" },

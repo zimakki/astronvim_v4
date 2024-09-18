@@ -48,33 +48,6 @@ return {
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
       -- configure the tailwindcss lsp to work with heex and ex files too
-      tailwindcss = {
-        init_options = {
-          userLanguages = {
-            elixir = "phoenix-heex",
-            heex = "phoenix-heex",
-          },
-        },
-        settings = {
-          includeLanguages = {
-            ["html-eex"] = "html",
-            ["phoenix-heex"] = "html",
-            heex = "html",
-            eelixir = "html",
-            elixir = "html",
-          },
-        },
-        root_dir = function(fname)
-          return require("lspconfig.util").root_pattern(
-            "tailwind.config.js",
-            "tailwind.config.ts",
-            "postcss.config.js",
-            "postcss.config.ts",
-            "package.json",
-            ".git"
-          )(fname) or vim.fn.getcwd()
-        end,
-      },
       lexical = {
         cmd = { "/Users/zimakki/code/lexical-lsp/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
         filetypes = { "elixir", "eelixir", "heex", "surface" },

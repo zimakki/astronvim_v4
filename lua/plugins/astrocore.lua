@@ -44,8 +44,8 @@ return {
     mappings = {
       n = {
         -- mappings seen under group name "Buffer"
-        ["<leader>b"] = { name = "Buffers" },
-        ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "NNNNNew tab" },
+        -- ["<leader>b"] = { name = "Buffers" },
+        -- ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "NNNNNew tab" },
         -- 🔭 Telescope
         ["<leader>sb"] = { ":Telescope buffers<cr>", desc = "🔭 Buffers" },
         ["<leader>ss"] = { ":Telescope current_buffer_fuzzy_find<cr>", desc = "🔭 Search Buffer" },
@@ -70,11 +70,8 @@ return {
 
         ["<C-e>"] = { "$", desc = "got the end of the line" },
         ["<C-a>"] = { "0", desc = "got the start of the line" },
-        ["yY"] = { "ggVG", desc = "select AAAALLLLLLLLLL" },
-        ["<C-p>"] = { "@qn", desc = "🏃💨 rrruuuunnnn the macro and go to the next search term!!" },
 
-        ["<leader>aa"] = { ":ChatGPT<cr>", desc = "🧠 💬 ChatGPT" },
-        ["gj"] = { ":lua require('illuminate').goto_next_reference(wrap)<CR>", desc = "🏃💡 Illuminate Next" },
+        -- ["gj"] = { ":lua require('vessel').VesselViewLocalJumps<CR>", desc = "🏃💡 Vessel View Local Jumps" },
         ["gk"] = { ":lua require('illuminate').goto_prev_reference(wrap)<CR>", desc = "🏃💡 Illuminate Prev" },
         ["gf"] = { "gF", desc = "📁 Better gf! you want to go to the line number if it can find it" },
       },

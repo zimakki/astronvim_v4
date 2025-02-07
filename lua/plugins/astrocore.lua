@@ -52,6 +52,10 @@ return {
         ["<leader>sh"] = { ":Telescope resume<cr>", desc = "🔭 Telescope History" },
         ["<leader>st"] = { ":TodoTelescope<cr>", desc = "🔭 Telescope todo's" },
         ["<leader>sc"] = { ":Telescope command_history<CR>", desc = "🔭 Telescope command_history" },
+        ["<leader>sf"] = {
+          ":Telescope frecency workspace=CWD path_display={'shorten'} theme=ivy<CR>",
+          desc = "🔭 Telescope frecency",
+        },
         ["<leader>sp"] = {
           ":Telescope mona elixir_application_modules<cr>",
           desc = "🔭 Telescope mona application modules",

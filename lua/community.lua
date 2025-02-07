@@ -8,6 +8,7 @@ return {
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.bars-and-lines.vim-illuminate" },
+  { import = "astrocommunity.completion.blink-cmp" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.diagnostics.error-lens-nvim" },
   { import = "astrocommunity.diagnostics.lsp_lines-nvim" },

@@ -39,7 +39,6 @@ return {
     },
   },
   { import = "astrocommunity.motion.flash-nvim" },
-  { import = "astrocommunity.motion.grapple-nvim" },
   { import = "astrocommunity.motion.vim-matchup" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.full-dadbod" },

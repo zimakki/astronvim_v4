@@ -56,7 +56,7 @@ return {
         ["<leader>st"] = { ":TodoTelescope<cr>", desc = "🔭 Telescope todo's" },
         ["<leader>sc"] = { ":Telescope command_history<CR>", desc = "🔭 Telescope command_history" },
         ["<leader>sf"] = {
-          ":Telescope frecency workspace=CWD path_display={'shorten'}<CR>",
+          ":Telescope frecency workspace=CWD<CR>",
           desc = "🔭 Telescope frecency",
         },
         ["<leader>sp"] = {

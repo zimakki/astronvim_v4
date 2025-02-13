@@ -16,6 +16,7 @@ return {
     "MunifTanjim/nui.nvim",
     --- The below dependencies are optional,
     "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
+    "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
     "zbirenbaum/copilot.lua", -- for providers='copilot'
     {
       -- support for image pasting
